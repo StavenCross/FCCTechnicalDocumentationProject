@@ -1,0 +1,79 @@
+body {
+    background-color:#FFFFFF;
+    font-family:"Segoe UI",Arial;
+    display:grid;
+    grid-template-columns: 360px auto;
+    grid-template-areas: "navbar main-doc";
+    font-size:18px;
+}
+
+
+#navbar header {
+    display:flex;
+}
+
+h1 {
+    margin:auto;
+    font-size:26px;
+}
+
+h2 {
+    font-size:22px;
+}
+
+#navbar {
+    grid-area:navbar;
+    border-right:2px solid darkgray;
+    position:fixed;
+    width:360px;
+    height:100%;
+}
+
+#main-doc {
+    grid-area:main-doc;
+    margin:30px 30px 30px 30px;
+    max-width:100%;
+    min-width:200px;
+}
+
+#navbar a {
+    text-decoration:none;
+    color:black;
+    font-size:22px;
+}
+#navbar a:hover {
+    color:darkblue;
+}
+#navbar ul {
+    padding-left:0px;
+}
+#navbar li {
+    list-style:none;
+    border-top:1px solid black;
+    padding:10px 0 10px 40px;
+}
+#navbar li:nth-last-child(1) {
+    border-bottom:1px solid black;
+}
+
+pre {
+    font-size:14px;
+}
+
+@media only screen and (max-width: 815px) {
+    body {
+        display:flex;
+        flex-direction:column;
+    }
+    #navbar {
+        display:block;
+        width:100%;
+        position:inherit;
+        height:300px;
+        overflow-y:scroll;
+        border-bottom:3px solid darkgray;
+    }
+    #main-doc {
+        display:block;
+    }
+}
